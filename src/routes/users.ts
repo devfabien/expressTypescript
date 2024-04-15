@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { getUsers } from "../handlers/users.handlers";
+import { getUserById, getUsers } from "../handlers/users.handlers";
 
 const router = Router();
 
 router.get("/", getUsers);
+
+router.get("/:id", getUserById);
 
 export default router;
