@@ -1,10 +1,6 @@
-import express from "express";
-import usersRouter from "./routes/users";
-
-const app = express();
+import { createApp } from "./createApp";
+const app = createApp();
 
 const PORT = 3000;
-
-app.use("/api/users", usersRouter);
 
 app.listen(PORT, () => console.log(`Running on Port ${PORT}`));
